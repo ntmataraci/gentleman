@@ -38,12 +38,12 @@ const words=[
 "I always admire how you are able to admit when you are wrong It is never easy, but it is obvious that you always learn from it "]
 
 let progStart=false
-Const name=document.querySelector("name").value
-Const timer=document.querySelector("timer").value
+Const name=document.querySelector("#name").value
+Const timer=document.querySelector("#timer").value
 
-document.querySelector("start").addEventlistener("click",()=>{
+document.querySelector("#start").addEventlistener("click",()=>{
 progStart=!progStart
-(progStart)?document.querySelector("start").value="enough":document.querySelector("start").value="talk"
+(progStart)?document.querySelector("#start").value="enough":document.querySelector("#start").value="talk"
 (progStart)?startProg:stopProg
 }
 
