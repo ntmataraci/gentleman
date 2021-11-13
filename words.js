@@ -37,7 +37,16 @@ const words=[
 "I always love how you make a positive impact on children You always seem to make them smile ",
 "I always admire how you are able to admit when you are wrong It is never easy, but it is obvious that you always learn from it "]
 
+let progStart=false
+Const name=document.querySelector("name").value
+Const timer=document.querySelector("timer").value
 
+document.querySelector("start").addEventlistener("click",()=>{
+progStart=!progStart
+(progStart)?document.querySelector("start").value="enough":"talk"
+}
+
+Function startProg
 setInterval(() => {
     alert(words[Math.floor(Math.random()*(words.length)-1)])
 }, 20000);
