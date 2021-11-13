@@ -37,20 +37,36 @@ const words=[
 "I always love how you make a positive impact on children You always seem to make them smile ",
 "I always admire how you are able to admit when you are wrong It is never easy, but it is obvious that you always learn from it "]
 
-let progStart=false
-Const name=document.querySelector("#name").value
-Const timer=document.querySelector("#timer").value
+let myprogStart=false
+let myname=document.querySelector("#myname")
+let timer=document.querySelector("#timer")
 
-document.querySelector("#start").addEventlistener("click",()=>{
-progStart=!progStart
-(progStart)?document.querySelector("#start").value="enough":document.querySelector("#start").value="talk"
-(progStart)?startProg:stopProg
+document.querySelector("#start").addEventListener("click",calc)
+
+let myInterval
+
+function calc(){
+   myprogStart=!myprogStart
+
+    if (myprogStart){
+        document.querySelector("#start").value="enough"
+        startProg()
+    }else {
+        document.querySelector("#start").value="talk"
+        stopProg() 
+    }
+    }
+
+  
+
+function startProg(){
+document.querySelector("#start").addEventListener("click",calc)
+ myInterval=setInterval(() => {
+    alert(myname.value+": "+words[Math.floor(Math.random()*(words.length)-1)])
+}, timer.value<5?5000:timer.value*1000);
+console.log(timer.value*1000)
+myInterval}
+
+function stopProg(){
+clearInterval(myInterval)
 }
-
-Function startProg(){
-setInterval(() => {
-    alert(name+": "+words[Math.floor(Math.random()*(words.length)-1)])
-}, timer);}
-
-Function stopProg(){
-clearInterval(startProg)}
