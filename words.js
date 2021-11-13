@@ -43,10 +43,14 @@ Const timer=document.querySelector("timer").value
 
 document.querySelector("start").addEventlistener("click",()=>{
 progStart=!progStart
-(progStart)?document.querySelector("start").value="enough":"talk"
+(progStart)?document.querySelector("start").value="enough":document.querySelector("start").value="talk"
+(progStart)?startProg:stopProg
 }
 
-Function startProg
+Function startProg(){
 setInterval(() => {
     alert(words[Math.floor(Math.random()*(words.length)-1)])
-}, 20000);
+}, 20000);}
+
+Function stopProg(){
+clearInterval(startProg)}
