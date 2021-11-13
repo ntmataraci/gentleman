@@ -49,8 +49,8 @@ progStart=!progStart
 
 Function startProg(){
 setInterval(() => {
-    alert(words[Math.floor(Math.random()*(words.length)-1)])
-}, 20000);}
+    alert(name+": "+words[Math.floor(Math.random()*(words.length)-1)])
+}, timer);}
 
 Function stopProg(){
 clearInterval(startProg)}
